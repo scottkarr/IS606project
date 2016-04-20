@@ -1,0 +1,76 @@
+---
+title: "Income Inequality project proposal"
+output:
+  html_document:
+    css: ./lab.css
+    fig_caption: yes
+    highlight: pygments
+    keep_md: yes
+    number_sections: yes
+    theme: cerulean
+    toc: yes
+  pdf_document: default
+  word_document: default
+---
+Scott Karr & Yadu Chittampalli
+
+#Synoposis
+Income inequality is a global phenomenon that is viewed in relation to the geographic,
+economic and political boundaries that define its dispersion. The GINI index is an 
+internationally recognized measure of income dispersion within a specified geographic 
+area.  Income inequality has also become an increasingly topical discussion as a 
+matter of development and growth both within OECD and developing countries.  GINI's
+advantage is that it captures dispresion in a singular index as a function of the 
+Lorenz Curve which has been in use since the early 20th century.
+
+Developing countries such as India will analyzed in this study in contrast to the 
+U.S.--an OECD country. Income dispersion in India will be by province a rough 
+equivalent to states in the U.S. as a basis for comparison.
+
+We plan to use publshed statistics from a variety of sources on GINI including . . .
+
+Data will be sourced from .csv files using the U.S. Census website and the 
+Reserve Bank of India website. ETL transformations and clean-ups will be performed 
+in R and stored in MySQL/NoSQL for persistence, and the graphs and plots will be 
+rendered. Scatterplots will be used to illustrate the correlation between income 
+dispersion and other factors such as geographic boundaries. The graphics will be 
+displayed using color gradient to depict GINI relationships using ggmap.
+
+The implications of income dispersion on growth and governance has implications 
+to countries development.  Testing such correlations and their effect is beyond
+the scope of this exercise, however, showing the contrasts in itself we believe
+will be informative.
+
+#Data
+
+The Census Bureau publishes data sets which track the GINI index at different 
+levels of geographic granularity including region, state, congressional district 
+and metropolitan statical area.  This study analyzes the income dispersion within the
+United States using Census data and in particular, income data collected for the 
+American Community Survey.  The Census Bureau provides the followng tool for 
+acquiring data sets . . .
+
+http://factfinder.census.gov/faces/nav/jsf/pages/guided_search.xhtml
+
+    * Gini Indicies by Global
+    --INDIA
+    * Gini Indicies by Province    
+    --US
+    * Gini Indicies by Region
+    * Gini Indicies by State
+    * Gini Indicies by Congressional District
+    * Gini Indicies by Metropolitan Statistical Area  
+
+The following cases correspond to each geographic level data set above:
+    *     World Data - as available
+    *     Province Data - as available
+    *   4 Regions:  Northeast, Midwest, South and West + US Oveall 
+    *  50 States
+    * 436 Congressional Districts
+    * 916 Gini Indicies by Metropolitan Statistical Area 
+
+The following Variables will be collected for analysis within each data set:
+  
+    * Catagorical:  Geographic Level
+    * Numeric:      Gini Index
+
